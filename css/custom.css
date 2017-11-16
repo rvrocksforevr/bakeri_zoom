@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+
+@media only screen and (max-width: 767px){
+	body{
+		font-family: 'Roboto', sans-serif;
+		margin: 0;
+        padding: 0;
+	}
+	.bakeri_img_box .bakeri_product_image, .bakeri_fullscreen .bakeri_product_image,{
+		position: relative;
+		display: block;
+		border: 1px solid #ededed;
+		transition: all ease 0.5s;
+	}
+	.bakeri_image_gallery {
+		position: relative;
+		text-align: center;
+	}
+	.bakeri_image_gallery .bakeri_main_image.visible{
+		display: block;
+		margin: auto;
+	}
+	.bakeri_image_gallery .bakeri_main_image.invisible{
+		display: none;
+	}
+	.bakeri_img_box .bakeri_product_image{
+		margin-bottom: 10px;
+	}
+    .bakeri_thumbs_link{
+    	display: block;
+    }
+    .bakeri_prev{
+	    background: hsla(0, 0%, 73%, 0.5);
+	    position: absolute;
+	    top: 45%;
+	    transform: translate3d(0,-50%,0);
+	    z-index: 15;
+	    left:0px;
+	    width: 30px;
+	    height: 30px;
+	    text-align: center;
+	    line-height: 40px;
+	    border-radius: 0;
+	    border: 0;
+	    outline: none;
+	    cursor: pointer;
+	    box-shadow: 0 0 6px 0 rgba(0,0,0,0.4);
+    } 
+    .bakeri_next{
+	    background: hsla(0, 0%, 73%, 0.5);
+	    position: absolute;
+	    top: 45%;
+	    right: 0px;
+        transform: translate3d(0,-50%,0) rotate(180deg);
+	    z-index: 15;
+	    width: 30px;
+	    height: 30px;
+	    text-align: center;
+	    line-height: 40px;
+	    border-radius: 0;
+	    border: 0;
+	    outline: none;
+	    cursor: pointer;
+	    box-shadow: 0 0 6px 0 rgba(0,0,0,0.4);
+    } 
+
+	.bakeri_img_box .bakeri_productcategory_name h1{
+	    margin: 5px;
+	    margin-bottom: 0.5em;
+	    color: #636363;
+	    font-family: 'Roboto', sans-serif;
+	    font-size: 22px;
+	    font-weight: 400;
+	    font-style: normal;
+	    line-height: 1.2;
+	    text-rendering: optimizeLegibility;
+	    text-transform: uppercase;
+    }
+	.bakeri_img_box{
+		width: 100%;
+		float: none;
+		padding-right: 0;
+		padding-left: 0;
+		margin-bottom: 15px;
+	}
+	ul.bakeri_image_thumbs, .bakeri_images{
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	}  
+    .thumb_active{
+    	border: 2px solid #636363 !important;
+    }   
+	.bakeri_image_thumbs li {
+		float: left;
+        margin: 0 5px;
+        border: 2px solid hsla(0, 0%, 73%, 0.5);
+	}
+	.bakeri_img_box .bakeri_product_image img, .bakeri_fullscreen .bakeri_product_image img{
+		height: 100vh;
+        max-width: 100%;
+        width:100%;
+    }
+
+	.bakeri_arrow_expand {
+		position: absolute;
+		top: 10px;
+		right: 5px;
+		display: block;
+		width: 24px;
+		height: 24px;
+		background-image: url(../images/icon_sprite@2x.png);
+		background-size: 100px 1000px;
+		background-position: 0px -675px;
+	}
+	.bakeri_arrow_shrink {
+		position: fixed;
+		top: 10px;
+		left: 5px;
+		display: block !important;
+		width: 24px;
+		height: 24px;
+		background-image: url(../images/icon_sprite@2x.png);
+		background-size: 100px 1000px;
+		background-position: -30px -675px;
+		display:none;
+		z-index: 99;
+	}
+	
+	.bakeri_plus_sign{
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		display: block !important;
+		width: 24px;
+		height: 24px;
+		background-image: url(../images/icon_sprite@2x.png);
+		background-size: 100px 1000px;
+		background-position: 2px -695px;
+		display: none;
+		border: 1px solid #6d6d69;
+		z-index: 99;
+	}
+	
+	.bakeri_minus_sign {
+		position: fixed;
+		top: 45px;
+		right: 10px;
+		display: block !important;
+		width: 24px;
+		height: 24px;
+		background-image: url(../images/icon_sprite@2x.png);
+		background-size: 100px 1000px;
+		background-position: -31px -695px;
+		display: none;
+		border: 1px solid #6d6d69;
+		z-index: 99;
+	}
+	.bakeri_main_image_expand{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		max-width: 100%;
+		transform: translate3d(-50%,-60%,0);
+		transition: transform .3s ease-out, opacity .2s ease-out;
+		will-change: transform;
+	}
+	.bakeri_first_zoom{
+		position: relative;
+	    left: 50%;
+	    top: 50%;
+	    max-width: 95%;
+	    transform: translate3d(-50%,-50%,0) scale(2.5);
+	    transition: transform .3s ease-out,opacity .2s ease-out;
+        will-change: transform;
+	}
+	.bakeri_zoom_pic_first{
+		overflow:hidden;
+	}
+	.bakeri_second_zoom{
+		position: relative;
+	    left: 50%;
+	    top: 50%;
+	    max-width: 95%;
+	    transform: translate3d(-50%,-50%,0) scale(4.5);
+	    transition: transform .3s ease-out,opacity .2s ease-out;
+        will-change: transform;
+	}
+    .zoom_level_one{
+	    left: 100%;
+	    top: 110%;
+	}
+	.zoom_level_two{
+	    left: 180%;
+	    top: 180%;
+    }
+	.bakeri_image_gallery_expand{
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: #fbfbfb;
+		z-index: 3;
+		overflow: hidden;
+	}
+	.bakeri_fullscreen{
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: #fbfbfb;
+		z-index: 3;
+		overflow: hidden;
+		display:none;
+	}
+    .bakeri_zoom_gallery{
+    	position: fixed;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    background: #f4ede5;
+	    z-index: 1;
+	    overflow: auto;
+    }
+    .bakeri_zoom_sign{
+    	display: none;
+    }
+
+   /* .slide_zoom_main{
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    max-width: 95%;
+	    transform: translate3d(-50%,-50%,0);
+	    transition: transform .3s ease-out,opacity .2s ease-out;
+	    will-change: transform;
+    }*/
+	.bakeri_zoom_first{
+        position: fixed;
+        left: 0;
+        top: 0;
+		right: 0;
+		bottom: 0;
+		background: #fff;
+		z-index: 5;
+	}
+	.bakeri_more_views_thumb{
+		background: rgba(0, 0, 0, 0.2);
+        position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 10px 5px 5px 5px;
+		z-index:9;
+	}
+	.bakeri_more_views{
+		transform: translate3d(0,0,0);
+        transition: transform .15s ease-out;
+        display: none;
+	}
+	.more_views_thumbs{
+	    transform: translate3d(0,100%,0);
+	}
+	.bakeri_display_none{
+		display:none !important;
+	}
+	.bakeri_display_block{
+		display:block !important;
+	}
+	.bakeri_product_button{
+        width: 100%;
+	    height: 52px;
+	    display: flex;
+	}
+	.bakeri_addtocart_button{
+	    background-color: #3d9441;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    width: 50%;
+	    height: 52px;
+	    text-align: center;
+	    line-height: 54px;
+	    font-size: 14px;
+	    font-weight: 600;
+	    position: relative;
+	    overflow: hidden;
+	    text-transform: uppercase;
+    }
+    .bakeri_buynow_button{
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    width: 50%;
+	    height: 52px;
+	    text-align: center;
+	    line-height: 54px;
+	    font-size: 14px;
+	    font-weight: 600;
+	    position: relative;
+	    overflow: hidden;
+	    background-color: #fb641b;
+	    text-transform: uppercase;
+    }
+    .bakeri_addtocart_button a, .bakeri_buynow_button a{
+        color: #fff;
+        text-decoration: none;
+        display: block; 
+         width: 100%;
+        letter-spacing: 1px;
+    }
+
+    .bakeri_both_button{
+        visibility: visible;
+        transition: transform .5s ease-out;
+        transform: translateY(52px);
+	    position: relative;
+	    width: 100%;
+	    height: 52px;
+	}
+	.bakeri_static_button{
+	    position: fixed;
+	    left: 0;
+	    width: 100%;
+	    right: 0;
+	    bottom: 0px;
+	    z-index: 1;
+	    transition: transform .5s ease-out;
+	    transform: translateY(0px);
+	    background-color: #fff;
+	    visibility: visible;
+	    display: flex;
+	    box-shadow: 0 -5px 15px 0 rgba(0,0,0,.3);
+    }
+    .bakeri_product_name_div{
+	    display: inline-block;
+        margin: 5px 0;
+	    width: 100%;
+	}
+	.bakeri_product_name{
+		line-height: 20px;
+	    font-size: 20px;
+	    color: #212121;
+	    margin-left: 10px;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+    } 
+    .justify{
+    	text-align: justify;
+    	padding: 10px;
+    }
+    .bakeri_product_price{
+	    color: #414141;
+	    margin-right: 10px;
+	    font-size: 20px;
+	    font-weight: 500;
+	    float: right;
+    }
+    .bakeri_dots{
+	    position: absolute;
+	    bottom: 20%;
+	    left: auto;
+	    right: auto;
+	    margin: 0;
+	    padding: 0;
+	    text-align: center;
+	    width: 100%;
+	}
+    .bakeri_dots li {
+	    border-radius: 0.8rem;
+	    background-color: #D5DBDB;
+	    border: 0rem;
+	    display: inline-block;
+	    float: none;
+	    height: 0.8rem;
+	    list-style: none;
+	    margin: 0 .5rem;
+	    padding: 0;
+	    width: 0.8rem;
+	    box-shadow: 0 0 5px 0 rgba(0,0,0,0.7);
+    }
+    .bakeri_dots li.bakeri_selected{
+	    background-color: #414141;
+    }
+   .bakeri_message {
+		position: absolute;
+	    top: 43%;
+	    left: 0;
+	    width: 50%;
+	    right: 0;
+	    margin: auto;
+	    text-align: center;
+	    display: none;
+	    z-index: 99;
+	    background: rgba(33, 33, 33, 0.7);
+	    padding: 6px;
+	    border-radius: 3px;
+	    color: #fff;
+	    text-transform: uppercase;
+	    }
+	
+}
+	
+.center_origin
+{
+	transform-origin: -50% -50% 0;
+}

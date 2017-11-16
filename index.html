@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bakeri Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.panzoom.js"></script>
+
+    <script src="e-smart-zoom-jquery.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+   
+
+<div class="bakeri_img_box">
+    <div class="bakeri_productcategory_name">
+        <h1>Bakeri Man T-Shirt</h1>
+    </div>
+
+    <div class="bakeri_product_zoom">
+    <div class="bakeri_product_image">
+
+        <div class="bakeri_image_gallery" >
+
+            <img class="visible slide-main" src="images/slide-1-1.jpg" alt="Bakeri T-Shirt" title="Bakeri T-Shirt" target_bakery=".thumb_1" >
+     
+        	<a class="bakeri_arrow_expand" title="Go To Full Screen"></a>
+        </div>
+
+    </div>
+
+    <div class="bakeri_product_name_div">
+        <span class="bakeri_product_name">Bakeri New French T-Shirt</span>
+        <span class="bakeri_product_price">₹9,999</span>
+    </div>
+
+    <div class="bakeri_more_views">
+        <ul class="bakeri_image_thumbs">
+            <li class="thumbs thumb_active" bakeri-thumb=".thumb_1">
+                <div class="thumb_1" title="" >
+                    <img src="images/slide-1-thumb.jpg" width="64" height="64" alt="slide-1-thumb" slider_src="images/slide-1-1.jpg">
+                </div>
+            </li>
+            <li class="thumbs"  bakeri-thumb=".thumb_2">
+                <div class="thumb_2" title="" >
+                    <img src="images/slide-2-thumb.jpg" width="64" height="64" alt="slide-2-thumb" slider_src="images/slide-2-1.jpg">
+                </div>
+            </li>
+            <li class="thumbs"  bakeri-thumb=".thumb_3">
+                <div class="thumb_3" title="" >
+                    <img src="images/slide-3-thumb.jpg" width="64" height="64" alt="slide-3-thumb" slider_src="images/slide-3-1.jpg">
+                </div>
+            </li>
+            <li class="thumbs"  bakeri-thumb=".thumb_4">
+                <div class="thumb_4" title="" >
+                    <img src="images/slide-4-thumb.jpg" width="64" height="64" alt="slide-4-thumb" slider_src="images/slide-4-1.jpg">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="bakeri_message">Double Tap To Zoom</div>
+
+    <ul class="bakeri_dots">
+        <li id="dots-1" class="dot bakeri_selected" data-thumb=".thumb_1"></li>
+        <li id="dots-2" class="dot" data-thumb=".thumb_2"></li>
+        <li id="dots-3" class="dot" data-thumb=".thumb_3"></li>
+        <li id="dots-4" class="dot" data-thumb=".thumb_4"></li>
+    </ul> 
+
+
+    <div class="bakeri_control">
+        <a class="bakeri_prev" href="#" title="Prev Slide"><img src="images/next_prev.svg" width="24" height="24" alt="next_prev"></a>
+    </div>  
+    <div class="bakeri_control">
+        <a class="bakeri_next" href="#" title="Next Slide"><img src="images/next_prev.svg" width="24" height="24" alt="next_prev"></a>
+    </div>  
+    </div>
+</div>
+
+<div class="bakeri_fullscreen">
+    
+   
+</div>
+
+<div class="bakeri_zoom_sign">
+<a class="bakeri_arrow_shrink" title="Exit Full Screen"></a>
+<a class="bakeri_plus_sign " id="zoomInButton" title="Double Tap To Zoom In"></a>
+<a id="zoomOutButton" class=" bakeri_minus_sign" title="Double Tap To Zoom Out"></a> 
+</div>
+
+<p class="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+<div class="bakeri_static_button">
+<div class="bakeri_product_button">
+    <div class="bakeri_addtocart_button">
+        <a href="#">ADD TO CART</a>
+    </div>
+    <div class="bakeri_buynow_button">
+        <a href="#">BUY NOW</a>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+<style>
+    #imgContainer {
+width: 100%;
+height: 100vh;
+}
+#positionButtonDiv {
+/* Fallback for web browsers that doesn't support RGBa */
+background: rgb(58, 56, 63);
+/* RGBa with 0.6 opacity */
+background: rgba(58, 56, 63, 0.8);
+border: solid 1px #100000;
+color: #FFFFFF;
+padding: 8px;
+text-align: left;
+position: absolute;
+right: 35px;
+top: 190px;
+}
+#positionButtonDiv .positionButtonSpan img {
+float: right;
+border: 0;
+}
+.positionMapClass area {
+cursor: pointer;
+}
+.zoomButton {
+border: 0;
+cursor: pointer;
+}
+
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    
+
+});
+</script>
+</html>
